@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    {% block title %}
+    <title>Matt Femia | Portfolio</title>
+    {% endblock %}
+
+    <!-- Meta tags-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="description" content="Matt Femia Portfolio. Fullstack developer and bioinformatics analyst. Founder of The Micrographer and Labvivo, inc.">
+    <meta name="author" content="Matt Femia, Matthew Femia">
+    <meta name="keywords" content="matt femia, bioinformatics resume, fullstack developer resume, labvivo, micrographer, bioinformatics freelance">
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Social Media meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Matt Femia | Developer Portfolio" />
+    <meta name="twitter:description" content="Fullstack Developer & Bioinformatics. Owner @ The Micrographer & Labvivo, inc."/>
+    <meta name="twitter:image" content="{{ url_for('static', filename='img/mf_logo_transparent.png') }}"/>
+
+    <meta property="og:title" content="Matt Femia | Developer Portfolio"/>
+    <meta property="og:description" content="Fullstack Developer & Bioinformatics. Owner @ The Micrographer & Labvivo, inc." />
+    <meta property="og:image" content="{{ url_for('static', filename='img/mf_logo_transparent.png') }}"/>
+    <meta property="og:url" content="https://www.mattfemia.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Dependencies -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3316036b24.js" crossorigin="anonymous"></script>
+
+    <link href="{{ url_for('static', filename='vendor/themify-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='logo/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="preloader" style="display: none;"></div>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="2880" height="1882"
+            style="width: 100%; height: 100%;"></canvas></div>
+    <header class="sticky-top bg-black">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+                <a class="navbar-brand" href="/">
+                    <img class="img-fluid" src="{{ url_for('static', filename='img/mf_logo_transparent.png') }}" height=50 width=50 alt="Matt Femia developer portfolio logo as the initials M and F">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-expanded="false">
+                    <i class="fas fa-bars white text-primary"></i>
+                </button>
+                <div class="collapse navbar-collapse text-center text-primary" id="navigation">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience">experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#publication">publications</a></li>
+                    </ul><a href="#contact" class="btn btn-secondary ml-lg-4">contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Form Errors -->
+    {% for field in contact.errors %}
+        {% for error in contact.errors[field] %}
+            <div class="error">Message not sent: {{ error }}</div>
+        {% endfor %}
+    {% endfor %}
+
+    <section class="section pb-0" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-1 font-weight-bold title mb-4 text-center text-md-start">Matt Femia<strong></strong></h1>
+                    <p class="h3 mb-5 text-center text-md-start">Fullstack Developer | Bioinformatician</p>
+                    <ul class="list-inline socials text-center text-md-start">
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.facebook.com/matt.femia"><i
+                                    class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://twitter.com/matt_femia"><i
+                                    class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.instagram.com/fattmemia/"><i
+                                    class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://github.com/mattfemia"><i
+                                    class="fa fa-github"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.linkedin.com/in/matthewfemia/"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pb-0" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 mb-5 text-center text-md-start">
+                    <h2>About</h2>
+                </div>
+                <div class="col-12">
+                    <article class="card bg-dark rounded-0 border-0">
+                        <div class="card-body">
+                        
+                            <p>
+                                Scientist with 6+ years of academic research and 3+ years of fullstack development and bioinformatics. 
+                                Strong background in statistical analysis and web development using Python, R, and JavaScript. 
+                            </p>
+                            <p>
+                                Research background centered around cancer research which includes publishing statistical models 
+                                in academic journals and developing in-house bioinformatics solutions. Most recent employment was 
+                                at Memorial Sloan Kettering developing novel immunotherapy treatments for breast cancer patients 
+                                alongside some of the world's top physician scientists and bioinformaticians.
+                            </p>
+                            <p class='pt-2'>
+                                Fullstack and product development experience includes end-to-end engineering and management of two small businesses: 
+                                <ul class='pb-2' style='list-style-type: square;'>
+                                    <li class='h5'> <a class='h5 text-primary' href="https://www.labvivo.com">LabVivo</a>, a cloud-based SaaS application suite aiming to streamline every phase of conducting scientific research </li>
+                                    <li class='h5'> <a class='h5 text-primary' href="https://www.themicrographer.com">The Micrographer</a>, an eCommerce business to dropship fine art prints of my personal microscopy photography </li>
+                                </ul>
+                                Additionally built or worked professionanlly on projects spanning several industries including eCommerce, 
+                                SaaS, Supply Chain, and Scientific/Medical Research. 
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pb-0" id="">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12">
+                        <article class="card bg-dark rounded-0 border-0">
+                        <div class="card-body">
+
+                            <p class=''>
+                                Technologies I've worked extensively with:
+                            </p>
+                            <p>
+                                <span class='h5 text-primary'>Programming: </span>Python, R, JavaScript, Node.js, React.js, jQuery
+                            </p>
+                            <p>
+                                <span class='h5 text-primary'>Bioinformatics/Data Science: </span>Python, R
+                            </p>
+                            <p>
+                                <span class='h5 text-primary'>Web Frameworks: </span>Flask, Shiny, Express.js
+                            </p>
+                            <p>
+                                <span class='h5 text-primary'>Database Systems: </span>MySQL, MongoDB, AWS RDS/Aurora, AWS DynamoDB, Redis
+                            </p>
+                            <p>
+                                <span class='h5 text-primary'>DevOps & Cloud Tech: </span>Docker, AWS EC2/EB/ECS/Cloudfront/SES/S3
+                            </p>
+                            
+                        </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pt-10 pt-sm-10 pb-0" id="experience">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5 text-center text-md-start">
+                    <h2>Professional Experience</h2>
+                </div>
+                
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <article class="card bg-dark rounded-0 border-0">
+                        <img src="" alt="" class="card-img-top mb-4 rounded-0">
+                        <div class="card-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="https://www.labvivo.com">
+                                    LabVivo, Inc.
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>
+                                Founder & Owner
+                            </h5>
+                            <p>Cloud-based software suite for modernizing laboratory & clinical research</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <article class="card bg-dark rounded-0 border-0">
+                        <img src="" alt="" class="card-img-top mb-4 rounded-0">
+                        <div class="card-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="https://www.themicrographer.com">
+                                    The Micrographer
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>
+                                Founder & Owner
+                            </h5>
+                            <p> Online shop for distributing my collection of fine art microscopy photography</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <article class="card bg-dark rounded-0 border-0">
+                        <img src="" alt="" class="card-img-top mb-4 rounded-0">
+                        <div class="card-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="https://www.mskcc.org/research-areas/labs/christopher-klebanoff">
+                                    Memorial Sloan Kettering
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>
+                                Research Technician
+                            </h5>
+                            <p> Research developing T-Cell immunotherapy treatments for breast cancer</p>
+                        </div>
+                    </article>
+                </div>
+
+
+
+                <!-- <div class="col-12 center text-primary mt-5"><a href=""
+                        class="btn btn-primary btn-style">All Projects</a></div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section pb-0" id="projects">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5 text-center text-md-start">
+                    <h2>Projects</h2>
+                </div>
+                <div class="col-md-12 col-sm-6 mb-1">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="/projects/immunovue">
+                                    ImmunoVue
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>Flask Web Application</h5>
+                            <p>Point-and-click application interface for analyzing single cell immune repertoire (RepSeq) data using Clonotypy</p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item">
+                                    <span class='text-primary'> Tech Stack:</span> Python (Clonotypy, Flask, pandas, numpy, seaborn, matplotlib), AWS (MySQL, EC2, Cloudfront, S3)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-6 mb-1">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="/projects/clonotools">
+                                    Clonotools
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>Shiny Web Application</h5>
+                            <p>Point-and-click application interface for analyzing single cell immune repertoire (RepSeq) data using Clonotypr</p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item">
+                                    <span class='text-primary'> Tech Stack:</span> R (Shiny, clonotypr, bs4Dash, shinyjs, shinyFiles, DT, many more), Docker, AWS (MySQL, EC2, ECS, ECR, Cloudfront, S3)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-6 mb-1">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="/projects/clonotypr">
+                                    Clonotypr
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>R Package</h5>
+                            <p>Package for analyzing single cell immune repertoire (RepSeq) data. Includes tools for formatting, analytics, plotting, and querying database APIs</p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item">
+                                    <span class='text-primary'> Tech Stack:</span> R: Seurat, dplyr, ggplot2, tidyr, stringb, networkd3, circlize, plotly, testthat
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-6 mb-1">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="/projects/clonotypy">
+                                    Clonotypy
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>Python Package</h5>
+                            <p>Package to analyze single cell immune repertoire (RepSeq) data. Includes tools for formatting, analytics, plotting, and querying database APIs</p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item">
+                                    <span class='text-primary'> Tech Stack:</span> Python: pandas, numpy, seaborn, matplotlib
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-6 mb-1">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="/projects/msk-inventory">
+                                    MSK Inventory
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>Node JS Web Application</h5>
+                            <p>Inventory and supply ordering application created internally for my lab at MSK. Optimized relative to MSK's native system.</p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item">
+                                    <span class='text-primary'> Tech Stack:</span> Node.js, Express.js, MongoDB, Heroku
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+               
+                
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section> 
+
+
+    <section class="section pb-0" id="education">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-5 text-center text-md-start">
+                    <h2>Education</h2>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row justify-content-around">
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <article class="card bg-dark rounded-0 border-0">
+                                <img src="" alt="" class="card-img-top mb-4 rounded-0">
+                                <div class="card-body text-center text-md-start">
+                                    <h4 class="title-border">Computer Science <br>[Non-Degree Option]</h4>
+                                    <p>April 2019 - September 2019<br><span class='h5' style='font-weight: 700; color: #57068c'> New York University</span></p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <article class="card bg-dark rounded-0 border-0">
+                                <img src="" alt="" class="card-img-top mb-4 rounded-0">
+                                <div class="card-body text-center text-md-start">
+                                    <h4 class="title-border">CS & Statistics <br>[Non-Degree Option]</h4>
+                                    <p>August 2018 - February 2019<br><span class='h5' style='font-weight: 700; color: #A41034'> Harvard University</span></p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <article class="card bg-dark rounded-0 border-0">
+                                <img src="" alt="" class="card-img-top mb-4 rounded-0">
+                                <div class="card-body text-center text-md-start">
+                                    <h4 class="title-border">MS in Biology <br>[Thesis Option]</h4>
+                                    <p>August 2015 - August 2017<br><span class='h5' style='font-weight: 700; color: #115740'> College of William & Mary</span></p>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col-lg-3 col-sm-6 mb-4">
+                            <article class="card bg-dark rounded-0 border-0">
+                                <img src="" alt="" class="card-img-top mb-4 rounded-0">
+                                <div class="card-body text-center text-md-start">
+                                    <h4 class="title-border">BS in Exercise Sciences <br>[Medical Emphasis]</h4>
+                                    <p>August 2011 - May 2015<br><span class='h5' style='font-weight: 700; color: #FFB700'> Ithaca College</span></p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pb-0" id="publication">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-5 text-center text-md-start">
+                    <h2>Publications</h2>
+                </div>
+                <div class="col-md-12 col-sm-6 mb-4">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7698992/">
+                                    TOX is a critical regulator of tumour-specific T cell differentiation
+                                </a>
+                            </h4>
+                            <p>July 2019 — <a href="">Nature</a></p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7698992/">Full Article</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-6 mb-4">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/med1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/31692077/">
+                                    Mediator subunit MED1 modulates intranuclear dynamics of the thyroid hormone receptor
+                                </a>
+                            </h4>
+                            <p>April 2020 — <a href="https://pubmed.ncbi.nlm.nih.gov/31692077/">Journal of Biochemistry</a></p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7456519/">Full Article</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               
+                
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section> 
+    
+    <section class="section pb-0" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0 text-center text-md-start">
+                    <h2 class="mb-4 mb-lg-5">Contact Me</h2>
+                    <form action="/" method="POST">
+                        
+                        {{ contact.csrf_token() }}
+                        
+                        <div class="form-group mb-4">
+                            <label for="name" class='h5 mb-2'>Name</label>
+                            {{ contact.name(class_='form-control text-center text-md-start', placeholder='Full Name') }}
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="email" class='h5 mb-2'>Email</label>
+                            {{ contact.email(class_='form-control text-center text-md-start', placeholder='email@example.com') }}
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label for="message" class='h5 mb-2'>Your Message</label>
+                            {{ contact.message(class_='form-control text-center text-md-start', placeholder='Message') }}
+                        </div>
+                        <div class="d-grid gap-2 col-md-3 col-6 mx-auto">
+                            {{ contact.submit(class_='btn btn-primary', placeholder='Name') }}
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-lg-5 offset-lg-1 text-center text-md-start">
+                    <h2 class="mb-4 mb-lg-5">Email</h2>
+                    <p class="mb-3 mb-lg-3">You can also reach out to me directly at the emial below:</p>
+                    <ul class="list-unstyled text-center text-md-start mb-4 mb-lg-5">
+                        <li class="mb-4">
+                            <i class="fas fa-envelope secondary text-secondary mr-5 mt-1"></i>
+                            <a href="mailto:matthew.femia@outlook.com" class='h5'>matthew.femia@outlook.com</a>
+                        </li>
+                    </ul>
+                    <h2 class="mb-2 mb-lg-5">Freelance Hire</h2>
+                    <p class="mb-3 mb-lg-3">
+                        Have a project or idea you're interested in bringing to life? 
+                        Reach out or consider hiring me as a freelance developer.
+                    </p>
+                    <p class="mb-3 mb-lg-3">
+                        You can find my freelance job experience and reviews here:
+                    </p>
+                    <ul class="list-unstyled text-center text-md-start">
+                        <li class="mb-4">
+                            <i class="fas fa-briefcase primary text-primary mr-5 mt-1"></i>
+                            <a href="https://www.upwork.com/freelancers/~010b9fe0feaf123349" class='h5'>Freelance Portfolio</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 center text-primary">
+                    <hr class="mx-auto border-default" style="width:100px">
+                    <ul class="list-inline socials mt-5 text-center">
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.facebook.com/matt.femia"><i
+                                    class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://twitter.com/matt_femia"><i
+                                    class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.instagram.com/fattmemia/"><i
+                                    class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://github.com/mattfemia"><i
+                                    class="fa fa-github"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.linkedin.com/in/matthewfemia/"><i
+                                    class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                    <p class="mt-5 text-center">Copyright © 2021 Matt Femia</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Dependencies -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='vendor/particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/particles.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
