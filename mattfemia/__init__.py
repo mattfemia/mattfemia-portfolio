@@ -8,7 +8,7 @@ def create_app():
     """ Init app with application context """
 
     app = Flask(__name__)
-    app.config.from_object('config.DevelopmentConfig')
+    app.config.from_object('config.ProductionConfig')
 
     # Init dependencies with app context format
     mail.init_app(app)
