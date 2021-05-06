@@ -25,4 +25,3 @@ class DevelopmentConfig(Config):
     DEBUG = True
     TESTING = True
     MAIL_DEBUG = True
-    WTF_CSRF_ENABLED = False

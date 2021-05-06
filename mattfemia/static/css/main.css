@@ -745,3 +745,9 @@ textarea.form-control {
   background-color: #222222;
   z-index: -1;
 }
+
+.alert-secondary {
+  background: #EE4266 !important;
+  border-color: #EE4266 !important; 
+  color: #ffffff; 
+}
