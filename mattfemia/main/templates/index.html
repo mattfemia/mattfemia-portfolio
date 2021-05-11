@@ -16,10 +16,12 @@
     <meta name="robots" content="index, follow" />
     
     <!-- Social Media meta tags -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Matt Femia | Developer Portfolio" />
     <meta name="twitter:description" content="Fullstack Developer & Bioinformatics. Owner @ The Micrographer & Labvivo, inc."/>
     <meta name="twitter:image" content="{{ url_for('static', filename='img/mf_logo_transparent.png') }}"/>
+    <meta name=”twitter:site” content=”@mattfemia_” /> 
+    <meta name=”twitter:creator” content=”@mattfemia_” /> 
 
     <meta property="og:url" content="https://www.mattfemia.com" />
     <meta property="og:type" content="website" />
@@ -87,16 +89,17 @@
                     <h1 class="display-1 font-weight-bold title mb-4 text-center text-md-start">Matt Femia<strong></strong></h1>
                     <p class="h3 mb-5 text-center text-md-start">Fullstack Developer | Bioinformatician</p>
                     <ul class="list-inline socials text-center text-md-start">
-                        <li class="list-inline-item"><a class='text-secondary' href="https://www.facebook.com/matt.femia"><i
-                                    class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a class='text-secondary' href="https://twitter.com/matt_femia"><i
-                                    class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a class='text-secondary' href="https://www.instagram.com/fattmemia/"><i
-                                    class="fa fa-instagram"></i></a></li>
                         <li class="list-inline-item"><a class='text-secondary' href="https://github.com/mattfemia"><i
-                                    class="fa fa-github"></i></a></li>
-                        <li class="list-inline-item"><a class='text-secondary' href="https://www.linkedin.com/in/matthewfemia/"><i
-                                    class="fa fa-linkedin"></i></a></li>
+                                class="fa fa-github"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.linkedin.com/in/mattfemia/"><i
+                                class="fa fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.instagram.com/mattvivo/"><i
+                                class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://twitter.com/mattfemia_"><i
+                                class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.facebook.com/matt.femia"><i
+                                class="fa fa-facebook"></i></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -249,7 +252,7 @@
                         <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
                         <div class="media-body text-center text-md-start">
                             <h4 class="mb-3">
-                                <a href="/projects/immunovue">
+                                <a href="#">
                                     ImmunoVue
                                 </a>
                             </h4>
@@ -268,7 +271,7 @@
                         <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
                         <div class="media-body text-center text-md-start">
                             <h4 class="mb-3">
-                                <a href="/projects/clonotools">
+                                <a href="#">
                                     Clonotools
                                 </a>
                             </h4>
@@ -287,7 +290,7 @@
                         <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
                         <div class="media-body text-center text-md-start">
                             <h4 class="mb-3">
-                                <a href="/projects/clonotypr">
+                                <a href="#">
                                     Clonotypr
                                 </a>
                             </h4>
@@ -306,7 +309,7 @@
                         <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
                         <div class="media-body text-center text-md-start">
                             <h4 class="mb-3">
-                                <a href="/projects/clonotypy">
+                                <a href="#">
                                     Clonotypy
                                 </a>
                             </h4>
@@ -325,7 +328,26 @@
                         <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
                         <div class="media-body text-center text-md-start">
                             <h4 class="mb-3">
-                                <a href="/projects/msk-inventory">
+                                <a href="https://github.com/mattfemia/iedb-python">
+                                    IEDB Python SDK
+                                </a>
+                            </h4>
+                            <h5 class='text-secondary'>Python Package</h5>
+                            <p>Python SDK for the Immune Epitope Database (IEDB) Analysis Tools API. Available on <a class='text-primary' href='https://pypi.org/project/iedb/'>PyPI</a></p>
+                            <ul class="btn-link-group list-inline">
+                                <li class="list-inline-item">
+                                    <span class='text-primary'> Tech Stack:</span> Python: requests, pandas, unittest
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-6 mb-1">
+                    <div class="media align-items-md-center flex-column flex-md-row">
+                        <!-- <img src="assets/img/tox1.jpeg" class="img-fluid mr-md-4 mb-4 mb-md-0" alt=""> -->
+                        <div class="media-body text-center text-md-start">
+                            <h4 class="mb-3">
+                                <a href="https://github.com/mattfemia/ck-orders">
                                     MSK Inventory
                                 </a>
                             </h4>
@@ -479,16 +501,17 @@
                     <ul class="list-unstyled text-center text-md-start mb-4 mb-lg-5">
                         <li class="mb-4">
                             <i class="fas fa-envelope secondary text-secondary mr-5 mt-1"></i>
-                            <a href="mailto:matthew.femia@outlook.com" class='h5'>matthew.femia@outlook.com</a>
+                            <a href="mailto:mf@mattfemia.com" class='h5'>mf@mattfemia.com</a>
                         </li>
                     </ul>
                     <h2 class="mb-2 mb-lg-5">Freelance Hire</h2>
                     <p class="mb-3 mb-lg-3">
                         Have a project or idea you're interested in bringing to life? 
-                        Reach out or consider hiring me as a freelance developer.
+                        Consider hiring me as a freelance developer for your job. I'm also
+                        more than happy to discuss your project before any commitment.
                     </p>
                     <p class="mb-3 mb-lg-3">
-                        You can find my freelance job experience and reviews here:
+                        You can view my freelance profile here:
                     </p>
                     <ul class="list-unstyled text-center text-md-start">
                         <li class="mb-4">
@@ -506,16 +529,16 @@
                 <div class="col-12 center text-primary">
                     <hr class="mx-auto border-default" style="width:100px">
                     <ul class="list-inline socials mt-5 text-center">
+                        <li class="list-inline-item"><a class='text-secondary' href="https://github.com/mattfemia"><i
+                                class="fa fa-github"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.linkedin.com/in/mattfemia/"><i
+                                class="fa fa-linkedin"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://www.instagram.com/mattvivo/"><i
+                                class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a class='text-secondary' href="https://twitter.com/mattfemia_"><i
+                                    class="fa fa-twitter"></i></a></li>
                         <li class="list-inline-item"><a class='text-secondary' href="https://www.facebook.com/matt.femia"><i
                                     class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item"><a class='text-secondary' href="https://twitter.com/matt_femia"><i
-                                    class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item"><a class='text-secondary' href="https://www.instagram.com/fattmemia/"><i
-                                    class="fa fa-instagram"></i></a></li>
-                        <li class="list-inline-item"><a class='text-secondary' href="https://github.com/mattfemia"><i
-                                    class="fa fa-github"></i></a></li>
-                        <li class="list-inline-item"><a class='text-secondary' href="https://www.linkedin.com/in/matthewfemia/"><i
-                                    class="fa fa-linkedin"></i></a></li>
                     </ul>
                     <p class="mt-5 text-center">Copyright © 2021 Matt Femia</p>
                 </div>
