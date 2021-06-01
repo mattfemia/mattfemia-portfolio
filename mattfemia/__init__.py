@@ -15,9 +15,15 @@ def create_app():
 
     with app.app_context():
         from .main import main
+        from .clonotypr import clonotypr
 
         app.register_blueprint(blueprint=main.main,
                                 url_prefix='',
+                                subdomain='',
+                                url_defaults='')
+        
+        app.register_blueprint(blueprint=clonotypr.clonotypr,
+                                url_prefix='/clonotypr',
                                 subdomain='',
                                 url_defaults='')
 

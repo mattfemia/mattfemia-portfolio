@@ -21,11 +21,11 @@ main = Blueprint(name='main',
 def index():
 
     # Redirect http to https
-    if os.environ['FLASK_ENV'] == 'production':
-        if request.url.startswith('http://'):
-            url = request.url.replace("http://", "https://", 1)
-            code = 301
-            return redirect(url, code=code)
+    # if os.environ['FLASK_ENV'] == 'production':
+    #     if request.url.startswith('http://'):
+    #         url = request.url.replace("http://", "https://", 1)
+    #         code = 301
+    #         return redirect(url, code=code)
 
     contact = ContactForm()
     if contact.validate_on_submit():
@@ -44,7 +44,7 @@ def index():
         return redirect(url_for('main.index'))
 
     return render_template(
-        'index.html',
+        'main/index.html',
         contact=contact
     )
 

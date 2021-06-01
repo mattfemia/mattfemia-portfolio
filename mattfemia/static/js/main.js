@@ -1,24 +1,3 @@
-// $(document).ready(function(){
-
-//     $(document).on('click', '#contactSubmit', function(){
-
-//         var name = $('#contactName').val();
-//         var email = $('#contactEmail').val();
-//         var message = $('#contactMessage').val();
-
-//         req = $.ajax({
-//             url: '/',
-//             type: 'POST',
-//             data: { name: name, email: email, message: message }
-//         });
-
-//         req.done(function(data) {
-            
-//             $('#contact').fadeOut(1000).fadeIn(1000);
-
-//         })
-//     })
-// })
 
 (function ($) {
     'use strict';
