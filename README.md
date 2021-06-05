@@ -11,7 +11,7 @@ Personal site used as a digital resume, staging application deployments, and for
 ## 🚀 App Subdomain Routes
   
 - [Labstock](http://labstock.mattfemia.com) - Node JS inventory and lab-supply order-tracking application
-- [Clonotools](http://clonotools.mattfemia.com) - R Shiny application for analyzing single-cell immune repertoire data
+- [ImmunoTools](http://immuno.mattfemia.com) - R Shiny data dashboard application for analyzing single-cell immune repertoire data
 
 ## ⭐️ External Project Redirects
   
