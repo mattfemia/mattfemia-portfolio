@@ -9,7 +9,7 @@ class Config:
     MAIL_USERNAME = os.environ.get('SMTP_USERNAME')
     MAIL_PASSWORD = os.environ.get('SMTP_PASSWORD')
     MAIL_SERVER = os.environ.get('SMTP_SERVER')
-    MAIL_PORT = 465
+    MAIL_PORT = os.environ.get('SMTP_PORT')
     MAIL_DEFAULT_SENDER = os.environ.get('MAIL_DEFAULT_SENDER')
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
