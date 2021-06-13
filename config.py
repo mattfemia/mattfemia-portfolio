@@ -25,3 +25,6 @@ class DevelopmentConfig(Config):
     DEBUG = True
     TESTING = True
     MAIL_DEBUG = True
+
+    # Disable CSRF tokens in the Forms (only valid for testing purposes!)
+    WTF_CSRF_ENABLED = False

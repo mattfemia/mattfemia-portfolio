@@ -556,7 +556,9 @@
                     <h2 class="mb-4 mb-lg-5">Contact Me</h2>
                     <form action="/" method="POST">
                         
-                        {{ contact.csrf_token() }}
+                        {% if 'csrf_token' in contact %}
+                            {{contact.csrf_token() }}
+                        {% endif %}
                         
                         <div class="form-group mb-4">
                             <label for="name" class='h5 mb-2'>Name</label>
