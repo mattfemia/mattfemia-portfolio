@@ -17,8 +17,8 @@ eval $(aws ecr get-login --no-include-email)
 
 # build the docker image and push to an image repository
 docker build -t mattfemia/mattfemia-portfolio .
-docker tag mattfemia/mattfemia-portfolio:latest $IMAGE_REPO_URL:test
-docker push $IMAGE_REPO_URL:test
+docker tag mattfemia/mattfemia-portfolio:latest $IMAGE_REPO_URL:latest
+docker push $IMAGE_REPO_URL:latest
 
 # update an AWS ECS service with the new image
-ecs-deploy -c $CLUSTER_NAME -n $SERVICE_NAME -i $IMAGE_REPO_URL:test --timeout 0
+ecs-deploy -c $CLUSTER_NAME -n $SERVICE_NAME -i $IMAGE_REPO_URL:latest --force-new-deployment --timeout 600
