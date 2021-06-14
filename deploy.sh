@@ -1,5 +1,5 @@
 # install AWS SDK
-pip install --user awscli
+pip install awscli
 export PATH=$PATH:$HOME/.local/bin
 
 # install necessary dependency for ecs-deploy
@@ -13,7 +13,7 @@ curl https://raw.githubusercontent.com/silinternational/ecs-deploy/master/ecs-de
 sudo chmod +x /usr/bin/ecs-deploy
 
 # login AWS ECR
-eval $(aws ecr get-login --region us-east-2)
+eval $(aws ecr get-login --no-include-email)
 
 # build the docker image and push to an image repository
 docker build -t mattfemia/mattfemia-portfolio .
