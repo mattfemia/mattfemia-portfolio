@@ -22,6 +22,7 @@ This app has a CI/CD deployment configuration using TravisCI and AWS:
 ## Project Routes
   
 - [Clonotypr](https://www.mattfemia.com/clonotypr) - R package. Bioinformatics tools for analyzing and visualizing immunosequencing data  
+- [Clonotypy](https://www.mattfemia.com/clonotypy) - Python package. Python version of clonotypr, with support for Scanpy and many additional statistical analysis.
   
 ## App Subdomains  
 

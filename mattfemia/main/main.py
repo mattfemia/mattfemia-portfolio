@@ -100,3 +100,8 @@ def send_contact_email(email, name, message):
     )
 
     return
+
+@main.route('/clonotypy', methods=['GET'])
+def clonotypy():
+
+    return render_template('main/clonotypy.html')
