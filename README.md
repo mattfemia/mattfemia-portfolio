@@ -35,4 +35,4 @@ This app has a CI/CD deployment configuration using TravisCI and AWS:
   
 Majority of my personal projects are hosted on their own domains and closed-source. Below are a few apps shown on the site:  
   
-- [Micrographer](https://www.themicrographer.com) - My dropship eCommerce business for selling microscope artwork [Status: 🏢 Complete]
+- [Micrographer](https://www.micrographer.com) - My eCommerce business for selling open and limited edition fine art microscope prints [Status: 🏢 Complete]
