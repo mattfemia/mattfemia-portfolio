@@ -1,0 +1,28 @@
+<header class="sticky-top bg-black">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+            <a class="navbar-brand" href="/">
+                <img class="img-fluid" src="{{ url_for('static', filename='img/mf_logo_transparent.png') }}"
+                    alt="Matt Femia developer resume site logo" height=50 width=50>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+                aria-expanded="false">
+                <i class="fas fa-bars white text-primary"></i>
+            </button>
+            <div class="collapse navbar-collapse text-center text-primary" id="navigation">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">about</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publication">publications</a></li>
+                </ul>
+                <a class='btn btn-secondary ml-lg-4'
+                    href="https://mattfemia-site.s3.us-east-2.amazonaws.com/matt-femia-resume.pdf">
+                    <i class="fa fa-download"></i>
+                    <span class="ml-2">Resume/CV</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>

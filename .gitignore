@@ -4,6 +4,8 @@ test_mattfemia.py
 links.txt
 
 # --------------------------------------------------------------------------- #
+# AWS
+AWSCLIV2.pkg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

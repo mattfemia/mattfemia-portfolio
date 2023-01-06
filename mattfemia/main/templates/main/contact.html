@@ -1,0 +1,44 @@
+<section class="section pb-0" id="contact">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0 text-center text-md-start">
+              <h2 class="mb-4 mb-lg-5">Contact Me</h2>
+              <form action="/" method="POST">
+                  
+                  {% if 'csrf_token' in contact %}
+                      {{contact.csrf_token() }}
+                  {% endif %}
+                  
+                  <div class="form-group mb-4">
+                      <label for="name" class='h5 mb-2'>Name</label>
+                      {{ contact.name(class_='form-control text-center text-md-start', placeholder='Full Name') }}
+                  </div>
+
+                  <div class="form-group mb-4">
+                      <label for="email" class='h5 mb-2'>Email</label>
+                      {{ contact.email(class_='form-control text-center text-md-start', placeholder='email@example.com') }}
+                  </div>
+
+                  <div class="form-group mb-4">
+                      <label for="message" class='h5 mb-2'>Your Message</label>
+                      {{ contact.message(class_='form-control text-center text-md-start', placeholder='Message') }}
+                  </div>
+                  <div class="d-grid gap-2 col-md-3 col-6 mx-auto">
+                      {{ contact.submit(class_='btn btn-primary', placeholder='Name') }}
+                  </div>
+
+              </form>
+          </div>
+          <div class="col-lg-5 offset-lg-1 text-center text-md-start">
+              <h2 class="mb-4 mb-lg-5">Email</h2>
+              <p class="mb-3 mb-lg-3">You can also reach out to me directly at the email below:</p>
+              <ul class="list-unstyled text-center text-md-start mb-4 mb-lg-5">
+                  <li class="mb-4">
+                      <i class="fas fa-envelope secondary text-secondary mr-5 mt-1"></i>
+                      <a href="mailto:mf@mattfemia.com" class='h5'>mf@mattfemia.com</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
