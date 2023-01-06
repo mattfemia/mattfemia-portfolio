@@ -257,6 +257,10 @@ h6,
   color: #fff;
 }
 
+.active-experience {
+  border: 1px solid #a6ffa6 !important;
+}
+
 body {
   background-color: #000;
   overflow-x: hidden;
