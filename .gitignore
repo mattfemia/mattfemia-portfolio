@@ -3,6 +3,10 @@ test_mattfemia.py
 *.ai
 links.txt
 
+static/doc
+static/img
+static/logo
+
 # --------------------------------------------------------------------------- #
 # AWS
 AWSCLIV2.pkg
